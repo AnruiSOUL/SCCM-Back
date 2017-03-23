@@ -1,0 +1,14 @@
+package crame.randall.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Created by randallcrame on 3/23/17.
+ */
+@RestController
+@RequestMapping("api/vi/")
+public class AbilityScoreController {
+
+
+}
