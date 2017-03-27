@@ -1,21 +1,24 @@
 package crame.randall.model.abilityscore;
 
+import org.springframework.context.annotation.Configuration;
+
 /**
  * Created by randallcrame on 3/23/17.
  */
+@Configuration
 public abstract class AbilityScore
 {
-    int score;
-    int bonus;
+    Integer score;
+    Integer bonus;
 
     public void setBonus()
     {
-        this.bonus = (this.score - 10)/2;
+        this.bonus = (score - 10)/2;
     }
 
     public int getScore()
     {
-        return score;
+        return this.score;
     }
 
     public void setScore(int score)
@@ -25,11 +28,12 @@ public abstract class AbilityScore
 
     public int getBonus()
     {
-        return bonus;
+        setBonus();
+        return this.bonus;
     }
 
     public void setBonus(int bonus)
     {
-        this.bonus = bonus;
+       this.bonus = bonus;
     }
 }
