@@ -1,4 +1,4 @@
-package crame.randall.model.abilityscore;
+package model.abilityscore;
 
 import org.springframework.context.annotation.Configuration;
 
@@ -8,10 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Charisma extends AbilityScore
 {
-    public Charisma() {}
-    public Charisma(Integer score)
+    public Charisma(Integer abilityScore)
     {
-        this.abilityScore = score;
-        this.setBonus();
+        super(abilityScore);
     }
 }

@@ -1,4 +1,4 @@
-package crame.randall.model.abilityscore;
+package model.abilityscore;
 
 import org.springframework.context.annotation.Configuration;
 

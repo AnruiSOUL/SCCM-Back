@@ -1,4 +1,4 @@
-package crame.randall.model.abilityscore;
+package model.abilityscore;
 
 import org.springframework.context.annotation.Configuration;
 
@@ -14,13 +14,15 @@ public abstract class AbilityScore
     private Integer damageModifier;
     private Integer tempModifier;
 
-    public void setAbilityModifier()
+    AbilityScore(int abilityScore)
     {
-        this.abilityModifier = (abilityScore + itemModifier + damageModifier + tempModifier - 10)/2 ;
+        this.abilityScore = abilityScore;
+        setAbilityModifier();
     }
 
     public int getAbilityScore()
     {
+        setAbilityModifier();
         return this.abilityScore;
     }
 
@@ -29,16 +31,16 @@ public abstract class AbilityScore
         this.abilityScore = abilityScore;
     }
 
+    public void setAbilityModifier()
+    {
+        this.abilityModifier = (abilityScore + itemModifier + damageModifier + tempModifier - 10)/2 ;
+    }
+
     public int getAbilityModifier()
     {
         setAbilityModifier();
         return this.abilityModifier;
     }
-    public void setAbilityModifier(int abilityModifier)
-    {
-       this.abilityModifier = abilityModifier;
-    }
-
 
     public Integer getItemModifier() {
         return itemModifier;

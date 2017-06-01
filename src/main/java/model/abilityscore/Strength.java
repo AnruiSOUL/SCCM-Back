@@ -1,4 +1,4 @@
-package crame.randall.model.abilityscore;
+package model.abilityscore;
 
 import org.springframework.context.annotation.Configuration;
 
@@ -9,10 +9,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Strength extends AbilityScore
 {
-    public Strength() {}
-    public Strength(Integer score)
+    public Strength(Integer abilityScore)
     {
-        this.abilityScore = score;
-        this.setBonus();
+        super(abilityScore);
     }
 }

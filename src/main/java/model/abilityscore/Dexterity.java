@@ -1,4 +1,4 @@
-package crame.randall.model.abilityscore;
+package model.abilityscore;
 
 import org.springframework.context.annotation.Configuration;
 
@@ -9,10 +9,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Dexterity extends AbilityScore
 {
-    public  Dexterity() {}
-    Dexterity(Integer score)
+    Dexterity(Integer abilityScore)
     {
-        this.abilityScore = score;
-        this.setBonus();
+        super(abilityScore);
     }
 }
