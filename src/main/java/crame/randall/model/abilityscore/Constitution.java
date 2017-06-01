@@ -11,7 +11,7 @@ public class Constitution extends AbilityScore
     public Constitution(){}
     public Constitution (Integer score)
     {
-        this.score = score;
+        this.abilityScore = score;
         this.setBonus();
     }
 }

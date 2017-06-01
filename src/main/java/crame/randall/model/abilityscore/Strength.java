@@ -12,7 +12,7 @@ public class Strength extends AbilityScore
     public Strength() {}
     public Strength(Integer score)
     {
-        this.score = score;
+        this.abilityScore = score;
         this.setBonus();
     }
 }

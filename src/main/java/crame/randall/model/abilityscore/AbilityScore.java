@@ -8,32 +8,59 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public abstract class AbilityScore
 {
-    Integer score;
-    Integer bonus;
+    private Integer abilityScore;
+    private Integer abilityModifier;
+    private Integer itemModifier;
+    private Integer damageModifier;
+    private Integer tempModifier;
 
-    public void setBonus()
+    public void setAbilityModifier()
     {
-        this.bonus = (score - 10)/2;
+        this.abilityModifier = (abilityScore + itemModifier + damageModifier + tempModifier - 10)/2 ;
     }
 
-    public int getScore()
+    public int getAbilityScore()
     {
-        return this.score;
+        return this.abilityScore;
     }
 
-    public void setScore(int score)
+    public void setAbilityScore(int abilityScore)
     {
-        this.score = score;
+        this.abilityScore = abilityScore;
     }
 
-    public int getBonus()
+    public int getAbilityModifier()
     {
-        setBonus();
-        return this.bonus;
+        setAbilityModifier();
+        return this.abilityModifier;
+    }
+    public void setAbilityModifier(int abilityModifier)
+    {
+       this.abilityModifier = abilityModifier;
     }
 
-    public void setBonus(int bonus)
-    {
-       this.bonus = bonus;
+
+    public Integer getItemModifier() {
+        return itemModifier;
+    }
+
+    public void setItemModifier(Integer itemModifier) {
+        this.itemModifier = itemModifier;
+    }
+
+    public Integer getDamageModifier() {
+        return damageModifier;
+    }
+
+    public void setDamageModifier(Integer damageModifier) {
+        this.damageModifier = damageModifier;
+    }
+
+    public Integer getTempModifier() {
+        return tempModifier;
+    }
+
+    public void setTempModifier(Integer tempModifier) {
+        this.tempModifier = tempModifier;
     }
 }

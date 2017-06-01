@@ -11,7 +11,7 @@ public class Charisma extends AbilityScore
     public Charisma() {}
     public Charisma(Integer score)
     {
-        this.score = score;
+        this.abilityScore = score;
         this.setBonus();
     }
 }

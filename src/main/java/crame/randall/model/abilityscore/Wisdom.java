@@ -12,7 +12,7 @@ public class Wisdom extends AbilityScore
     public Wisdom(){}
     public Wisdom(Integer score)
     {
-        this.score = score;
+        this.abilityScore = score;
         this.setBonus();
     }
 }

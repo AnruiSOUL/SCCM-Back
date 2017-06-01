@@ -17,22 +17,22 @@ public class AbilityScoreTest {
     @Test
     public void AbilityScoreCharismaTest() {
         int expected = 18;
-        int actual = test.getScore();
+        int actual = test.getAbilityScore();
         Assert.assertEquals("Expected to be 18", expected, actual );
     }
 
     @Test
     public void BonusScoreTest() {
         int expected = 4;
-        int actual = test.getBonus();
+        int actual = test.getAbilityModifier();
         Assert.assertEquals("Expected to be 4", expected, actual );
     }
 
     @Test
     public void BonusScoreNegativeTest() {
-        test.setScore(3);
+        test.setAbilityScore(3);
         int expected = -3;
-        int actual = test.getBonus();
+        int actual = test.getAbilityModifier();
         Assert.assertEquals("Expected to be 4", expected, actual );
     }
 }

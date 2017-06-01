@@ -12,7 +12,7 @@ public class Intelligence extends AbilityScore
     public Intelligence() {}
     Intelligence(Integer score)
     {
-        this.score = score;
+        this.abilityScore = score;
         this.setBonus();
     }
 }
