@@ -18,4 +18,10 @@ public class BasicInformation {
     private String mythicTier;
     private Long experiencePoints;
     private String languages;
+    private Integer height;
+    private Integer weight;
+    private String eyeColor;
+    private String hairColor;
+    private String skinColor;
+    private String homeland;
 }
