@@ -71,21 +71,9 @@ public class ArmorClass {
         return sizeBonus;
     }
 
-    public void setSizeBonus(Size sizeBonus) {
-        Integer bonus = 0;
-        switch (sizeBonus) {
-            case FINE: bonus = 8; break;
-            case DIMINUTIVE: bonus = 4; break;
-            case TINY: bonus = 2; break;
-            case SMALL: bonus = 1; break;
-            case MEDIUM: bonus = 0; break;
-            case LARGE: bonus = -1; break;
-            case HUGE: bonus = -2; break;
-            case GARGANTUAN: bonus = -4; break;
-            case COLOSSAL: bonus = -8; break;
-            default: break;
-        }
-        this.sizeBonus = bonus;
+    public void setSizeBonus(Integer sizeBonus) {
+
+        this.sizeBonus = sizeBonus;
     }
 
     public Integer getNaturalBonus() {
@@ -118,5 +106,20 @@ public class ArmorClass {
 
     public void setMiscBonus(Integer miscBonus) {
         this.miscBonus = miscBonus;
+    }
+
+    private Integer checkSizeBonus(Size sizeBonus) {
+        switch (sizeBonus) {
+            default:
+            case MEDIUM: return 0;
+            case FINE: return 8;
+            case DIMINUTIVE: return 4;
+            case TINY: return 2;
+            case SMALL: return 1;
+            case LARGE: return -1;
+            case HUGE: return -2;
+            case GARGANTUAN: return -4;
+            case COLOSSAL: return -8;
+        }
     }
 }
