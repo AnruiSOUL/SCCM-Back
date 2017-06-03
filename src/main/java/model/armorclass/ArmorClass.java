@@ -31,8 +31,8 @@ public class ArmorClass {
         return touchAC;
     }
 
-    public void setTouchAC(Integer touchAC) {
-        this.touchAC = touchAC;
+    public void setTouchAC() {
+        this.touchAC = 10 + getDexMod() + getSizeBonus() + getDeflectionBonus();
     }
 
     public Integer getFlatfootedAC() {
@@ -40,7 +40,7 @@ public class ArmorClass {
     }
 
     public void setFlatfootedAC(Integer flatfootedAC) {
-        this.flatfootedAC = flatfootedAC;
+        this.flatfootedAC = 10 + getArmorBonus() + getShieldBonus() + getSizeBonus() + getNaturalBonus() + getDeflectionBonus() + getMiscBonus();
     }
 
     public Integer getArmorBonus() {
