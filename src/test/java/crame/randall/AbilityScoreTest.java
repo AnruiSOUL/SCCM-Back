@@ -1,6 +1,6 @@
 package crame.randall;
 
-import model.abilityscore.Charisma;
+import crame.randall.Entity.CharacterScore.Charisma;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
