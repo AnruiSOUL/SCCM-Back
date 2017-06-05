@@ -6,7 +6,7 @@ package crame.randall.Entity.CharacterScore;
 
 public class Dexterity extends AbilityScore
 {
-    Dexterity(Integer abilityScore)
+    public Dexterity(Integer abilityScore)
     {
         super(abilityScore);
     }

@@ -25,6 +25,30 @@ public class BasicInformation {
     private String skinColor;
     private String homeland;
 
+    public BasicInformation(){}
+
+    public BasicInformation(String characterName, String race, String favoredClass, String gender, Integer age, Size size, String alignment, String deity, String fame, String classLevels, String mythicTier, Long experiencePoints, String languages, Integer height, Integer weight, String eyeColor, String hairColor, String skinColor, String homeland) {
+        this.characterName = characterName;
+        this.race = race;
+        this.favoredClass = favoredClass;
+        this.gender = gender;
+        this.age = age;
+        this.size = size;
+        this.alignment = alignment;
+        this.deity = deity;
+        this.fame = fame;
+        this.classLevels = classLevels;
+        this.mythicTier = mythicTier;
+        this.experiencePoints = experiencePoints;
+        this.languages = languages;
+        this.height = height;
+        this.weight = weight;
+        this.eyeColor = eyeColor;
+        this.hairColor = hairColor;
+        this.skinColor = skinColor;
+        this.homeland = homeland;
+    }
+
     public String getCharacterName() {
         return characterName;
     }

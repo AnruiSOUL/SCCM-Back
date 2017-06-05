@@ -8,7 +8,7 @@ package crame.randall.Entity.CharacterScore;
 
 public class Intelligence extends AbilityScore
 {
-    Intelligence(Integer abilityScore)
+    public Intelligence(Integer abilityScore)
     {
         super(abilityScore);
     }
