@@ -31,10 +31,9 @@ public class CharacterSheet {
     private BasicInformation characterInformation;
     private CharacterScores characterScores;
     private HitPoint HP;
-    private Initiative initiative;
     private Speed speed;
     private Defenses defenses;
-    private AttackBonuses attBonues;
+    private AttackBonuses amtBonuses;
     private CharacterSavingThrows CharSavingThrow;
     private CombatManeuverBonus CMB;
     private CombatManeuverDefense CMD;
@@ -74,14 +73,6 @@ public class CharacterSheet {
         this.HP = HP;
     }
 
-    public Initiative getInitiative() {
-        return initiative;
-    }
-
-    public void setInitiative(Initiative initiative) {
-        this.initiative = initiative;
-    }
-
     public Speed getSpeed() {
         return speed;
     }
@@ -98,12 +89,12 @@ public class CharacterSheet {
         this.defenses = defenses;
     }
 
-    public AttackBonuses getAttBonues() {
-        return attBonues;
+    public AttackBonuses getAmtBonuses() {
+        return amtBonuses;
     }
 
-    public void setAttBonues(AttackBonuses attBonues) {
-        this.attBonues = attBonues;
+    public void setAmtBonuses(AttackBonuses amtBonuses) {
+        this.amtBonuses = amtBonuses;
     }
 
     public CharacterSavingThrows getCharSavingThrow() {

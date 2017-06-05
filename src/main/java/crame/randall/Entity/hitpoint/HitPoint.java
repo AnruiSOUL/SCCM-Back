@@ -7,4 +7,8 @@ public class HitPoint {
     private Integer maxHP;
     private Integer currentHP;
     private Integer nonLethalHP;
+
+    public HitPoint(int maxHP){
+        this.maxHP = maxHP;
+    }
 }
