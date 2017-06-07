@@ -6,6 +6,7 @@ import crame.randall.Entity.basicinformation.Size;
 import crame.randall.Entity.charactersheet.CharacterSheet;
 import crame.randall.Entity.hitpoint.HitPoint;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ import java.util.Map;
  * Created by AnruiSOUL on 6/5/2017.
  */
 public class FakeCharacterDAO {
-    private static Map<Integer, CharacterSheet> characters;
+    private static Map<String, CharacterSheet> characters;
     private static BasicInformation basicInformation;
     private static CharacterScores characterScores;
     private static HitPoint hitPoint;
@@ -28,10 +29,35 @@ public class FakeCharacterDAO {
                 new Charisma(10));
         hitPoint = new HitPoint(10);
 
-        characters = new HashMap<Integer,CharacterSheet>() {
+        characters = new HashMap<String,CharacterSheet>() {
             {
-                put(1, new CharacterSheet());
+                put("Anrui", new CharacterSheet());
             }
         };
+    }
+
+    public CharacterScores getCharacterScores(){
+        return characterScores;
+    }
+
+
+    public Collection<CharacterSheet> getAllCharacters() {
+        return this.characters.values();
+    }
+
+    public CharacterSheet getCharacterByName(String name){
+        return this.characters.get(name);
+    }
+
+    public void removeCharacterByName(String name){
+        this.characters.remove(name);
+    }
+
+    public void updateCharaceterSheet(CharacterSheet characterSheet){
+        //...
+    }
+
+    public void insertCharacterSheetToDb(CharacterSheet characterSheet) {
+        this.characters.put(characterSheet.getCharacterInformation().getCharacterName(), characterSheet);
     }
 }

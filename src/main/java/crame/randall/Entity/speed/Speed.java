@@ -8,4 +8,8 @@ public class Speed {
     private Integer burrow;
     private Integer climb;
     private Integer fly;
+
+    public Speed(int land){
+        this.land = land;
+    }
 }

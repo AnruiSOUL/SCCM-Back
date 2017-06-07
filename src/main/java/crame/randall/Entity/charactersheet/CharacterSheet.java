@@ -11,7 +11,6 @@ import crame.randall.Entity.combatmaneuver.CombatManeuverDefense;
 import crame.randall.Entity.defenses.Defenses;
 import crame.randall.Entity.feats.Feat;
 import crame.randall.Entity.hitpoint.HitPoint;
-import crame.randall.Entity.initiative.Initiative;
 import crame.randall.Entity.inventory.CarryCapacity;
 import crame.randall.Entity.inventory.Item;
 import crame.randall.Entity.inventory.Money;
@@ -57,7 +56,7 @@ public class CharacterSheet {
         this.characterInformation = characterInformation;
     }
 
-    public CharacterScores getCharacterScores() {
+    public CharacterScores cgetCharacterScores() {
         return characterScores;
     }
 

@@ -4,6 +4,8 @@ package crame.randall.Entity.CharacterScore;
 /**
  * Created by randallcrame on 3/24/17.
  */
+
+
 public class CharacterScores {
 
     private Strength STR;

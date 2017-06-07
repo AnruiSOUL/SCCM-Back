@@ -1,6 +1,10 @@
 package crame.randall.Service;
 
+import crame.randall.DAO.FakeCharacterDAO;
+import crame.randall.Entity.charactersheet.CharacterSheet;
 import org.springframework.stereotype.Service;
+
+import java.util.Collection;
 
 /**
  * Created by AnruiSOUL on 6/5/2017.
@@ -8,4 +12,27 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CharacterSheetService {
+
+    private FakeCharacterDAO fakeCharacterDAO;
+
+    public Collection<CharacterSheet> getAllCharacters() {
+        return fakeCharacterDAO.getAllCharacters();
+    }
+
+
+    public CharacterSheet getCharacterByName(String name) {
+        return fakeCharacterDAO.getCharacterByName(name);
+    }
+
+    public void removeCharacterByNameS(String name) {
+        this.fakeCharacterDAO.removeCharacterByName(name);
+    }
+
+    public void updateCharacterSheet(CharacterSheet characterSheet) {
+        this.fakeCharacterDAO.updateCharaceterSheet(characterSheet);
+    }
+
+    public void insertChacterSheet(CharacterSheet characterSheet) {
+        fakeCharacterDAO.insertCharacterSheetToDb(characterSheet);
+    }
 }
