@@ -67,4 +67,6 @@ public abstract class AbilityScore
     {
         this.tempModifier = tempModifier;
     }
+
+
 }

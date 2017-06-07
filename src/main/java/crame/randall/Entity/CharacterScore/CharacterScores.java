@@ -1,6 +1,8 @@
 package crame.randall.Entity.CharacterScore;
 
 
+import java.util.Collection;
+
 /**
  * Created by randallcrame on 3/24/17.
  */
@@ -14,6 +16,7 @@ public class CharacterScores {
     private Intelligence INT;
     private Wisdom WIS;
     private Charisma CHA;
+
     public CharacterScores(){}
     public CharacterScores(Strength STR, Dexterity DEX, Constitution CON, Intelligence INT, Wisdom WIS, Charisma CHA){
          this.STR = STR;
@@ -69,4 +72,6 @@ public class CharacterScores {
     public void setCHA(Charisma CHA) {
         this.CHA = CHA;
     }
+
+
 }

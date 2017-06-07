@@ -29,10 +29,10 @@ public class CharacterSheetService {
     }
 
     public void updateCharacterSheet(CharacterSheet characterSheet) {
-        this.fakeCharacterDAO.updateCharaceterSheet(characterSheet);
+        this.fakeCharacterDAO.updateCharacterSheet(characterSheet);
     }
 
-    public void insertChacterSheet(CharacterSheet characterSheet) {
+    public void insertCharacterSheet(CharacterSheet characterSheet) {
         fakeCharacterDAO.insertCharacterSheetToDb(characterSheet);
     }
 }

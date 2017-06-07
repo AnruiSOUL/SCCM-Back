@@ -41,6 +41,6 @@ public class CharacterSheetController {
 
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void insertCharacterSheet(@RequestBody CharacterSheet characterSheet){
-        characterSheetService.insertChacterSheet(characterSheet);
+        characterSheetService.insertCharacterSheet(characterSheet);
     }
 }

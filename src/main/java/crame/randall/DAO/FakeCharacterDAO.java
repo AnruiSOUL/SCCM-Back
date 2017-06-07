@@ -53,7 +53,7 @@ public class FakeCharacterDAO {
         this.characters.remove(name);
     }
 
-    public void updateCharaceterSheet(CharacterSheet characterSheet){
+    public void updateCharacterSheet(CharacterSheet characterSheet){
         //...
     }
 
