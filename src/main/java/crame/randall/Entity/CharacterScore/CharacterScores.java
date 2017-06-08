@@ -1,7 +1,6 @@
 package crame.randall.Entity.CharacterScore;
 
 
-import java.util.Collection;
 
 /**
  * Created by randallcrame on 3/24/17.

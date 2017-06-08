@@ -7,66 +7,53 @@ package crame.randall.Entity.CharacterScore;
 
 public abstract class AbilityScore
 {
-    private Integer abilityScore;
-    private Integer abilityModifier;
-    private Integer itemModifier;
-    private Integer damageModifier;
-    private Integer tempModifier;
+    private int abilityScore;
+    private int itemBonus;
+    private int abilityModifier;
+    private int temporaryAbilityScore;
+    private int temporaryModifier;
 
-    AbilityScore(int abilityScore)
-    {
+    AbilityScore(int abilityScore){
         this.abilityScore = abilityScore;
     }
 
-    public int getAbilityScore()
-    {
-        return this.abilityScore;
+    public int getAbilityScore() {
+        return abilityScore;
     }
 
-    public void setAbilityScore(int abilityScore)
-    {
+    public void setAbilityScore(int abilityScore) {
         this.abilityScore = abilityScore;
     }
 
-    public void setAbilityModifier(int abilityModifier)
-    {
+    public int getItemBonus() {
+        return itemBonus;
+    }
+
+    public void setItemBonus(int itemBonus) {
+        this.itemBonus = itemBonus;
+    }
+
+    public int getAbilityModifier() {
+        return abilityModifier;
+    }
+
+    public void setAbilityModifier(int abilityModifier) {
         this.abilityModifier = abilityModifier;
     }
 
-    public int getAbilityModifier()
-    {
-        return this.abilityModifier;
+    public int getTemporaryAbilityScore() {
+        return temporaryAbilityScore;
     }
 
-    public Integer getItemModifier()
-    {
-        return itemModifier;
+    public void setTemporaryAbilityScore(int temporaryAbilityScore) {
+        this.temporaryAbilityScore = temporaryAbilityScore;
     }
 
-    public void setItemModifier(Integer itemModifier)
-    {
-        this.itemModifier = itemModifier;
+    public int getTemporaryModifier() {
+        return temporaryModifier;
     }
 
-    public Integer getDamageModifier()
-    {
-        return damageModifier;
+    public void setTemporaryModifier(int temporaryModifier) {
+        this.temporaryModifier = temporaryModifier;
     }
-
-    public void setDamageModifier(Integer damageModifier)
-    {
-        this.damageModifier = damageModifier;
-    }
-
-    public Integer getTempModifier()
-    {
-        return tempModifier;
-    }
-
-    public void setTempModifier(Integer tempModifier)
-    {
-        this.tempModifier = tempModifier;
-    }
-
-
 }
