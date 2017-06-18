@@ -1,6 +1,7 @@
 package crame.randall.Service;
 
 import crame.randall.Entity.CharacterScore.CharacterScores;
+import crame.randall.Entity.charactersheet.CharacterSheet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +13,16 @@ import org.springframework.stereotype.Service;
 public class CharacterScoresService {
 
     @Autowired
-    CharacterScores characterScores;
+    CharacterSheet characterSheet;
 
 
     public void createCharacterScores(CharacterScores characterScores) {
-        this.characterScores = characterScores;
+        this.characterSheet.setCharacterScores(characterScores);
     }
+
+    public CharacterScores getCharacterScore(){
+        return characterSheet.getCharacterScores();
+    }
+
+
 }

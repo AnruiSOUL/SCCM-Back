@@ -1,6 +1,8 @@
 package crame.randall.Controller;
 
+import crame.randall.Entity.CharacterScore.CharacterScores;
 import crame.randall.Entity.charactersheet.CharacterSheet;
+import crame.randall.Service.CharacterScoresService;
 import crame.randall.Service.CharacterSheetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -16,8 +18,9 @@ import java.util.Collection;
 @RequestMapping("/charactersheet")
 public class CharacterSheetController {
 
-    @Autowired
+
     private CharacterSheetService characterSheetService;
+    private CharacterScoresService characterScoresService;
 
     @RequestMapping(method = RequestMethod.GET)
     public Collection<CharacterSheet> getAllCharacters(){
@@ -42,5 +45,15 @@ public class CharacterSheetController {
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void insertCharacterSheet(@RequestBody CharacterSheet characterSheet){
         characterSheetService.insertCharacterSheet(characterSheet);
+    }
+
+    @RequestMapping(value = "characterscore", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void createCharacterScores(@RequestBody CharacterScores characterScores){
+        characterScoresService.createCharacterScores(characterScores);
+    }
+
+    @RequestMapping(value = "chactacterscore", method = RequestMethod.GET)
+    public CharacterScores getCharacterScore(){
+        return characterScoresService.getCharacterScore();
     }
 }

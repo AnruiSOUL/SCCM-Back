@@ -11,17 +11,21 @@ import crame.randall.Entity.magicitems.MagicItem;
 import crame.randall.Entity.skills.Skill;
 import crame.randall.Entity.specialabilities.SpecialAbilities;
 import crame.randall.Entity.trait.Traits;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
 
 /**
  * Created by AnruiSOUL on 6/1/2017.
  */
+
+@Configuration
 public class CharacterSheet {
 
     private CharacterScores characterScores;
 
 
+    private
     private BasicInformation characterInformation;
 
 
@@ -43,7 +47,7 @@ public class CharacterSheet {
         this.characterInformation = characterInformation;
     }
 
-    public CharacterScores cgetCharacterScores() {
+    public CharacterScores getCharacterScores() {
         return characterScores;
     }
 

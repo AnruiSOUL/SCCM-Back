@@ -1,12 +1,13 @@
 package crame.randall.Entity.CharacterScore;
 
 
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by randallcrame on 3/24/17.
  */
 
-
+@Configuration
 public class CharacterScores {
 
     private Strength STR;
