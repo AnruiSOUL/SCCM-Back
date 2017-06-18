@@ -1,5 +1,6 @@
 package crame.randall.Entity.charactersheet;
 
+import crame.randall.Entity.CharacterScore.CharacterScores;
 import org.springframework.context.annotation.Configuration;
 
 
@@ -10,12 +11,17 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CharacterSheet {
 
-
   private String name;
   private String race;
   private String jobClass;
-  private int lvl;
 
+  public CharacterSheet(){}
+
+  public CharacterSheet(String name, String race, String jobClass){
+      this.name = name;
+      this.race = race;
+      this.jobClass = jobClass;
+  }
     public String getName() {
         return name;
     }
@@ -40,11 +46,4 @@ public class CharacterSheet {
         this.jobClass = jobClass;
     }
 
-    public int getLvl() {
-        return lvl;
-    }
-
-    public void setLvl(int lvl) {
-        this.lvl = lvl;
-    }
 }

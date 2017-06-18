@@ -5,6 +5,7 @@ import crame.randall.Entity.basicinformation.BasicInformation;
 import crame.randall.Entity.basicinformation.Size;
 import crame.randall.Entity.charactersheet.CharacterSheet;
 import crame.randall.Entity.hitpoint.HitPoint;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,31 +14,20 @@ import java.util.Map;
 /**
  * Created by AnruiSOUL on 6/5/2017.
  */
+
+@Repository
 public class FakeCharacterDAO {
+
     private static Map<String, CharacterSheet> characters;
-    private static BasicInformation basicInformation;
-    private static CharacterScores characterScores;
-    private static HitPoint hitPoint;
 
     static {
-        basicInformation = new BasicInformation("Anrui", "Human", "Monk", "Male",
-                18, Size.MEDIUM, "Law Neutral", "AGod", "Unknown", "Monk 1",
-                "None", 0L, "Common", 69, 160, "brown",
-                "black", "Olive", "East");
-        characterScores = new CharacterScores(new Strength(16), new Dexterity(14),
-                new Constitution(14), new Intelligence(10), new Wisdom(18),
-                new Charisma(10));
-        hitPoint = new HitPoint(10);
-
-        characters = new HashMap<String,CharacterSheet>() {
+        characters = new HashMap<String, CharacterSheet>() {
             {
-                put("Anrui", new CharacterSheet());
+                put("Anrui", new CharacterSheet("Anrui", "Elf", "Monk"));
+                put("Tanz", new CharacterSheet("Tanz", "Human", "Warrior"));
+                put("Soul", new CharacterSheet("Soul", "Gnome", "Wizard"));
             }
         };
-    }
-
-    public CharacterScores getCharacterScores(){
-        return characterScores;
     }
 
 
@@ -54,10 +44,12 @@ public class FakeCharacterDAO {
     }
 
     public void updateCharacterSheet(CharacterSheet characterSheet){
-        //...
+        CharacterSheet dbCharacterSheet = characters.get(characterSheet.getName());
+        dbCharacterSheet.setRace(characterSheet.getRace());
+        dbCharacterSheet.setJobClass(characterSheet.getJobClass());
     }
 
     public void insertCharacterSheetToDb(CharacterSheet characterSheet) {
-        this.characters.put(characterSheet.getCharacterInformation().getCharacterName(), characterSheet);
+        this.characters.put(characterSheet.getName(), characterSheet);
     }
 }

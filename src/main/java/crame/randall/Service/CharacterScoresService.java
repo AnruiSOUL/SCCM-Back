@@ -16,13 +16,7 @@ public class CharacterScoresService {
     CharacterSheet characterSheet;
 
 
-    public void createCharacterScores(CharacterScores characterScores) {
-        this.characterSheet.setCharacterScores(characterScores);
-    }
 
-    public CharacterScores getCharacterScore(){
-        return characterSheet.getCharacterScores();
-    }
 
 
 }
