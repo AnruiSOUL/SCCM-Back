@@ -19,7 +19,7 @@ public class CharacterSheetController {
     @Autowired
     private CharacterSheetService characterSheetService;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/getcharacterlist",method = RequestMethod.GET)
     public Collection<CharacterSheet> getAllCharacters(){
         return characterSheetService.getAllCharacters();
     }
