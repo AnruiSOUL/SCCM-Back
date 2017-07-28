@@ -19,4 +19,11 @@ public class AbilityScoreGeneratorTest {
         int expected = asGen.standardGenerator().length;
         Assert.assertEquals(actual,expected);
     }
+
+    @Test
+    public void standardGeneratorValueTest(){
+        int result = asGen.standardGenerator()[0];
+        boolean expected = (result > 2 && result < 19);
+        Assert.assertTrue(expected);
+    }
 }
