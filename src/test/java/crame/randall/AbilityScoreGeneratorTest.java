@@ -33,4 +33,11 @@ public class AbilityScoreGeneratorTest {
         boolean expected = (result > 2 && result < 19);
         Assert.assertTrue(expected);
     }
+
+    @Test
+    public void heroicGeneratorValueTest(){
+        int result = asGen.heroicGenerator().get(0)[3];
+        boolean expected = (result > 2 && result < 19);
+        Assert.assertTrue(expected);
+    }
 }

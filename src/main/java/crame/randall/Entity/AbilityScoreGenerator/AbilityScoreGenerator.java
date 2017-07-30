@@ -55,4 +55,26 @@ public class AbilityScoreGenerator {
         return values;
     }
 
+    private int[] heroicCreation(){
+        int[] results = Dice.multiDiceRoll(2, 6);
+        return results;
+    }
+
+    private int heroicValue(int[] results){
+        return IntStream.of(results).sum() + 6;
+    }
+
+    public ArrayList<int[]> heroicGenerator(){
+        ArrayList<int[]>  values = new ArrayList<>();
+
+        for (int i = 0; i<6; i++){
+            int[] diceResults = {0,0,6,0};
+            int[] diceCreation = heroicCreation();
+            System.arraycopy(diceCreation, 0, diceResults, 0,2 );
+            diceResults[3] = classicValue(diceCreation);
+            values.add(diceResults);
+        }
+        return values;
+    }
+
 }
