@@ -16,13 +16,13 @@ public class AbilityScoreGeneratorTest {
     @Test
     public void standardGeneratorTest(){
         int actual = 6;
-        int expected = asGen.standardGenerator().length;
+        int expected = asGen.standardGenerator().size();
         Assert.assertEquals(actual,expected);
     }
 
     @Test
     public void standardGeneratorValueTest(){
-        int result = asGen.standardGenerator()[0];
+        int result = asGen.standardGenerator().get(0)[4];
         boolean expected = (result > 2 && result < 19);
         Assert.assertTrue(expected);
     }
