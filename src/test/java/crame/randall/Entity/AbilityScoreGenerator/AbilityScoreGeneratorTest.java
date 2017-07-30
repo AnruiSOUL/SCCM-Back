@@ -1,4 +1,4 @@
-package crame.randall;
+package crame.randall.Entity.AbilityScoreGenerator;
 
 import crame.randall.Entity.AbilityScoreGenerator.AbilityScoreGenerator;
 import org.junit.Assert;
