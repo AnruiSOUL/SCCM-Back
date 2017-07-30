@@ -33,6 +33,26 @@ public class AbilityScoreGenerator {
         return values;
     }
 
+    private int[] classicCreation(){
+        int[] results = Dice.multiDiceRoll(3, 6);
+        return results;
+    }
 
+    private int classicValue(int[] results){
+        return IntStream.of(results).sum();
+    }
+
+    public ArrayList<int[]> classicGenerator(){
+        ArrayList<int[]>  values = new ArrayList<>();
+
+        for (int i = 0; i<6; i++){
+            int[] diceResults = new int[4];
+            int[] diceCreation = classicCreation();
+            System.arraycopy(diceCreation, 0, diceResults, 0,3 );
+            diceResults[3] = classicValue(diceCreation);
+            values.add(diceResults);
+        }
+        return values;
+    }
 
 }

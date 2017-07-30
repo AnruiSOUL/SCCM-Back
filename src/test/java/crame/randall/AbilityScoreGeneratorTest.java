@@ -26,4 +26,11 @@ public class AbilityScoreGeneratorTest {
         boolean expected = (result > 2 && result < 19);
         Assert.assertTrue(expected);
     }
+
+    @Test
+    public void classicGeneratorValueTest(){
+        int result = asGen.classicGenerator().get(0)[3];
+        boolean expected = (result > 2 && result < 19);
+        Assert.assertTrue(expected);
+    }
 }
