@@ -6,6 +6,7 @@ package crame.randall.Entity.CharacterScore;
  */
 public class Charisma extends AbilityScore
 {
+    public Charisma(){}
     public Charisma(Integer abilityScore)
     {
         super(abilityScore);

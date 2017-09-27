@@ -6,6 +6,7 @@ package crame.randall.Entity.CharacterScore;
 
 public class Strength extends AbilityScore
 {
+    public Strength(){};
     public Strength(Integer abilityScore)
     {
         super(abilityScore);

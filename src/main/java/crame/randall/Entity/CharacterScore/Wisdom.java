@@ -6,6 +6,7 @@ package crame.randall.Entity.CharacterScore;
 
 public class Wisdom extends AbilityScore
 {
+    public Wisdom(){}
     public Wisdom(Integer abilityScore)
     {
         super(abilityScore);

@@ -13,6 +13,7 @@ public abstract class AbilityScore
     private int temporaryAbilityScore;
     private int temporaryModifier;
 
+    AbilityScore(){}
     AbilityScore(int abilityScore){
         this.abilityScore = abilityScore;
     }

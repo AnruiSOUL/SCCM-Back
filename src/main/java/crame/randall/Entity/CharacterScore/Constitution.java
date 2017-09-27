@@ -5,6 +5,7 @@ package crame.randall.Entity.CharacterScore;
  */
 public class Constitution extends AbilityScore
 {
+    public Constitution(){}
     public Constitution (Integer abilityScore)
     {
         super(abilityScore);
