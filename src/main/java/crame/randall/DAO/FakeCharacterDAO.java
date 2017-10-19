@@ -1,10 +1,6 @@
 package crame.randall.DAO;
 
-import crame.randall.Entity.CharacterScore.*;
-import crame.randall.Entity.basicinformation.BasicInformation;
-import crame.randall.Entity.basicinformation.Size;
 import crame.randall.Entity.charactersheet.CharacterSheet;
-import crame.randall.Entity.hitpoint.HitPoint;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
