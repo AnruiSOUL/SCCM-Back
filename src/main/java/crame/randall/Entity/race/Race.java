@@ -11,13 +11,21 @@ import java.util.Map;
 
 public abstract class Race {
 
-
+    protected String race;
     protected Size size;
     protected Speed speed;
     protected ArrayList<Traits> racialTraits;
     protected ArrayList<String> racialLanguages;
 
     Race() {
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
     }
 
     public Size getSize() {

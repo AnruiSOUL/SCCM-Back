@@ -58,7 +58,8 @@ public class CharacterSheet {
         this.dndClass = dndClass;
     }
 
-    private void racialAdjustments(Race race) {
+    public void racialAdjustments(Race race) {
+        this.race = race.getRace();
         this.size = race.getSize();
         race.adjustRacialAbilityScores(this.characterScores);
         setTraitModifiers(race.getRacialTraits());
@@ -66,10 +67,10 @@ public class CharacterSheet {
         addLanguages(race.getRacialLanguages());
     }
 
-    private void addLanguages(ArrayList<String> racialLanguages) {
+    public void addLanguages(ArrayList<String> racialLanguages) {
     }
 
-    private void setTraitModifiers(ArrayList<Traits> racialTraits) {
+    public void setTraitModifiers(ArrayList<Traits> racialTraits) {
     }
 
 }

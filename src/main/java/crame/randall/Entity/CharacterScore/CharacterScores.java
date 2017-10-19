@@ -73,5 +73,10 @@ public class CharacterScores {
         this.CHA = CHA;
     }
 
+    public void adjustAbilityScore(AbilityScore abilityScore, int number){
+        int adjustedScore = abilityScore.getAbilityScore() + number;
+        abilityScore.setAbilityScore(adjustedScore);
+    }
+
 
 }

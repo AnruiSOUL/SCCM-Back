@@ -13,6 +13,7 @@ import java.util.Map;
 public class Dwarf extends Race {
 
     public Dwarf(){
+        this.race = "Dwarf";
         this.size = Size.MEDIUM;
         this.speed = new Speed(20);
         this.racialLanguages = listRacialLanguages();
@@ -25,10 +26,9 @@ public class Dwarf extends Race {
 
 
     public void adjustRacialAbilityScores(CharacterScores characterScores) {
-        Map<AbilityScore,Integer> abilityAdjustments = new HashMap<>();
-        abilityAdjustments.put(new Constitution(), 2);
-        abilityAdjustments.put(new Wisdom(), 2);
-        abilityAdjustments.put(new Charisma(), -2);
+        characterScores.adjustAbilityScore(characterScores.getCON(), 2);
+        characterScores.adjustAbilityScore(characterScores.getWIS(), 2);
+        characterScores.adjustAbilityScore(characterScores.getCHA(), -2);
     }
 
     public ArrayList<Traits> listRacialTraits() {
