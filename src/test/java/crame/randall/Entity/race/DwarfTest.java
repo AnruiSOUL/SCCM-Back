@@ -1,7 +1,6 @@
 package crame.randall.Entity.race;
 
-import crame.randall.Entity.CharacterScore.AbilityScore;
-import crame.randall.Entity.CharacterScore.Constitution;
+import crame.randall.Entity.CharacterScore.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,11 +11,15 @@ import static org.junit.Assert.*;
 public class DwarfTest {
 
     Race charRace;
+    CharacterScores characterScores;
 
     @Before
     public void setUp(){
         charRace = new Dwarf();
+        characterScores = new CharacterScores(new Strength(), new Dexterity(), new Constitution(14),
+                                                new Intelligence(), new Wisdom(10), new Charisma(10));
     }
+
     @Test
     public void listRacialLanguagesTest() throws Exception {
         String actual = "List of  Languages";
@@ -26,16 +29,11 @@ public class DwarfTest {
     }
 
     @Test
-    public void listAbilityAdjustmentsValuesTest() throws Exception {
-        String actual = "[2, 2, -2]"  ;
-        String expected = charRace.listAbilityAdjustments().values().toString();
-        assertEquals(actual, expected);
-    }
-
-    @Test
-    public void listAbilityAdjustmentsKeysTest() throws Exception {
-        Map expected = charRace.racialAbilityAdjustments;
-        assertTrue(expected.containsKey(Constitution()));
+    public void adjustRacialAbilityScoresTest() throws Exception {
+        charRace.adjustRacialAbilityScores(characterScores);
+        assertTrue(characterScores.getCON().getAbilityScore() == 16);
+        assertTrue(characterScores.getWIS().getAbilityScore() == 12);
+        assertTrue(characterScores.getCHA().getAbilityScore() == 8);
     }
 
     @Test

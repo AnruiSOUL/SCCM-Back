@@ -6,8 +6,7 @@ import crame.randall.Entity.speed.Speed;
 import crame.randall.Entity.trait.Traits;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
 
 
 public class Dwarf extends Race {

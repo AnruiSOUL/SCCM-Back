@@ -77,6 +77,4 @@ public class CharacterScores {
         int adjustedScore = abilityScore.getAbilityScore() + number;
         abilityScore.setAbilityScore(adjustedScore);
     }
-
-
 }
