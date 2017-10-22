@@ -19,8 +19,17 @@ public class Dwarf extends Race {
         this.racialTraits = listRacialTraits();
     }
 
-    public ArrayList<String> listRacialLanguages() {
-        return null;
+    protected ArrayList<String> listRacialLanguages() {
+        ArrayList<String> dwarfLanguages = new ArrayList<>();
+        dwarfLanguages.add("Common");
+        dwarfLanguages.add("Dwarven");
+        dwarfLanguages.add("Giant");
+        dwarfLanguages.add("Gnome");
+        dwarfLanguages.add("Goblin");
+        dwarfLanguages.add("Orc");
+        dwarfLanguages.add("Terran");
+        dwarfLanguages.add("Undercommon");
+        return dwarfLanguages;
     }
 
 
@@ -30,7 +39,7 @@ public class Dwarf extends Race {
         characterScores.adjustAbilityScore(characterScores.getCHA(), -2);
     }
 
-    public ArrayList<Traits> listRacialTraits() {
+    protected ArrayList<Traits> listRacialTraits() {
         return null;
     }
 }

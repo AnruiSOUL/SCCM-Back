@@ -60,9 +60,9 @@ public abstract class Race {
         this.racialLanguages = racialLanguages;
     }
 
-    public abstract ArrayList<String> listRacialLanguages();
+    protected abstract ArrayList<String> listRacialLanguages();
 
-    public abstract ArrayList<Traits> listRacialTraits();
+    protected abstract ArrayList<Traits> listRacialTraits();
 
     public abstract void adjustRacialAbilityScores(CharacterScores characterScores);
 }
